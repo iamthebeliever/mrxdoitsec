@@ -1,0 +1,162 @@
+What is IP?
+IP is a number used for addressing networked devices. It is devided in 4 octect total bit size = 32.
+
+What is a mac address?
+in computing it is defined as hexadecimal number like 3d:2e:44:c5:d9:1b bit size = 48.
+
+IP vs Mac
+IP is like your postal address and mac is you.
+
+Subnet Mask
+It is the maximum rage of ips inside a subnet.
+
+Private IPs
+10.0.0.0 -- 10.255.255.255
+172.16.0.0 -- 172.31.255.255
+198.168.0.0 -- 198.168.255.255
+
+CMD Challenge
+whoami & ping 8.8.8.8 //it will execute both commands
+whoami && ping 8.8.8.8 //if first command fails then the next command will be rejected
+//
+whoami | ping 8.8.8.8 //it will execute both commands
+whoami || ping 8.8.8.8 //if first command succeed then the next command will be rejected
+
+Open Redirection == Invalidated Redirects and Forwards
+in this attack the URL of a request made by a user changes without generating status code 301 and 302.
+
+Insecure Deserialization == Object Injection
+It happens when malformed/malfunctioned data is deserialized and processed by the applications.
+
+Missing Function Level Access Control
+This is a type of Broken Access Control, it happens during privileges escalation when an existing user of an application is able to access restricted functionalities.
+Example - Horizontal PE, Vertical PE.
+
+Indirect Object Reference
+It is type of broken access control vunerability, it happens when an application uses user-supplied input to access objects directly.
+Example - 
+https://insecure-website.com/customer_account?customer_number=132355/
+https://insecure-website.com/static/12144.txt
+
+Client Side Authentication
+Authentication is done at client side using programming language and plain text or stored credentials.
+
+Server Side Authentication
+Authentication is done at server side using server programming languages and database server.
+
+How to test csrf
+
+Intercept request/manipulate token/send request/test if token is strictly implemented or not/gerenrate poc from engagement tools/deploy the code/expolit
+
+Client Side Language
+
+Javascript/HTML/VBScript
+
+Server Side Language
+
+PHP/JSP/ASP
+
+Encryption
+Plain text into cipher text is encryption
+
+Types
+Symmetric/Asymmetric
+
+Symmetric
+Same key is used to encrypt and decrypt data by senders and receivers. Key is sent first before the encrypted data.
+
+Asymmetric
+This uses public key to send encrypt data and receiver decrypt this data using its private key.
+
+Symmetric VS Asymmetric
+
+Both provides higher confidentiality but their use denpends on the situations. when speed is required then symmetric encryption is best when more privacy is required then asymmetric is best. Suppose there is a very big amount of data to encrypt and decrypt then using asymmetric it will take longer time in comparing to symmetric.
+
+Key should be trasmitted with symmetric encryption, asymmetric doesn't require it - user already has its private key to decrypt the message. Suppose there are so many transactions then there should be so many request to send symmetric keys.
+
+Security and confidentiality - in both encryption confidentiality is high, but security is somewhat weak or risky in case of symmetric, because no channel is completely secure, means symmetric keys can be captured if channel is not secure. But this is not possible with asymmetric encryption.
+
+
+Client Side Validation Bypass
+1=1 or any malformed input
+Burpsuite or soruce code review
+
+Mitigation for poor customer
+
+whitelisting
+encoding
+hsts or https
+secure source code practice
+
+Client Side Validation Bypass
+done using payloads
+using burpsuite manually
+
+Threat/Attack/Vulnerablity
+Threat=goal
+Attack=method
+Vulnerability=flaw
+
+SQLi
+injecting some sql commands based statements in input fields or manipulating a url using some sql commands like order by, union or ',//,#.
+
+XSS
+it is an scritping attack which uses client side scripting to retrieve cookies, session-ids, tokens and other useful information.
+
+SSH
+it is used to remotly access networked devices for testing and configuration over ssl
+
+SMB
+it is used to share files between linux and windows
+
+LDAPi
+LDAP is a protocol used to provide web based directory access, it process directory database so it is used to perform LDAP injections by adversaries.
+
+XMLi
+xml injection is done over xml database
+
+OS Command Injection
+is done by accessing target's command shell to execute commands by the adversaries
+
+XXE
+is done by defining an external entity inside xml document by adversaries
+
+SSRF
+a request is done by server to access server resources initiated by the adversaries
+
+CSRF
+a request is done from client side without his intentions initiated by the adversaries
+
+SST
+small codes written inside the brackets either <> or {} is template. the code is processed at server side and result is displayed at client side. it is to add dynamic properties to the html documents.
+Example - Hello {{user.name}} Example - <%=100+100 %>
+
+X-Forwarded-Host --> standard header for identifying the original host requested by the client in the Host HTTP request header.
+
+X-Forwarded-For --> standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
+
+X-Forwarded-Proto --> standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
+
+Referer Header --> address of the page which generates the request
+
+Origin Header --> <scheme>://<hostname>:<port>
+
+X-Frame-Options --> deny/same-origin/allow-form-uri
+
+Content-Security-Policy --> response header allows web site administrators to control resources that the user agent is allowed to load for a given page
+
+Same-Origin-Policy --> is a critical security mechanism that restricts how a document or script loaded by one origin can interact with a resource from another origin
+
+Cookie Flags
+
+Expire --> it defines that after a particular time cookie will expire.
+
+HttpOnly --> it disables client side javascript only for accessing cookies.
+
+Secure --> it is used to ensure that cookie will only be transmitted over https.
+
+Path --> it defines the path for which cookie is assigned
+
+Domain --> it defines the domain for which cookie is assigned
+
+SameSite --> it is used to protecting sites to access cookies, i.e. strict value always protects other sites to access the cookies of a particular domain, lax will allow other sites to access cookies such as authentication cookies, and none for same origin or cors or everything.
